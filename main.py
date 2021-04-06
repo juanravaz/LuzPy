@@ -46,10 +46,10 @@ def download(days: int = 0):
             write_json(aux, f'{DATA_FOLDER}/{date_formatted}.json')
         elif status_code != 200:
             print('El recurso presenta errores')
-            return ()
+            return
         else:
             print(f'Ha sido imposible sacar información de la fecha {date_formatted}')
-            return ()
+            return
 
 
         from_date += timedelta(days=1)
